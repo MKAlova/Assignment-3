@@ -1,0 +1,84 @@
+public class Question2{
+    public static void main(String[] args) {
+        Author washington = new Author("Nicki Washington", "washingtonn@winthrop.edu", 'f');
+        Book toc = new Book("Stat Prepped: 10 steps to succeeding in College (and Having a Ball Doing It)!", washington, 14.95, 1908);
+        System.out.println(toc);
+        System.out.println(washington);
+    }
+}
+
+class Book{
+    String name;
+    Author author;
+    double price;
+    int qtyInStock;
+    
+    public Book(String name, Author author, double price, int qtyInStock){
+        this.name = name;
+        this.author = author;
+        this.price = price;
+        this.qtyInStock = qtyInStock;
+    }
+    
+    public String getName(){
+        return name;
+    }
+    
+    public Author getAuthor(){
+        return author;
+    }
+    
+    public double getPrice(){
+        return price;
+    }
+    
+    public void setPrice(double price){
+        this.price = price;
+    }
+    
+    public int getQrtInStock(){
+        return qtyInStock;
+    }
+    
+    public void setQrtInStock(int qtyInStock){
+        this.qtyInStock = qtyInStock;
+    }
+    
+    @Override
+    public String toString(){
+        return name + ", " + author + ", " + price + ", " + qtyInStock;
+    }
+}
+
+class Author{
+    private String name;
+    private String email;
+    private char gender;
+    
+    public Author(String name, String email, char gender){
+        this.name = name;
+        this.email = email;
+        this.gender = gender;
+    }
+    
+    public String getName(){
+        return name;
+    }
+    
+    public String getEmail(){
+        return email;
+    }
+    
+    public void setEmail(String email){
+        this.email = email;
+    }
+    
+    public char getGender(){
+        return gender;
+    }
+    
+    @Override
+    public String toString(){
+        return name + ", " + email + ", " + gender;
+    }
+}
